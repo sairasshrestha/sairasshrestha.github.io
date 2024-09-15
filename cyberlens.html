@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viewing Files in Windows Command Prompt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Viewing Files in Windows Command Prompt</h1>
+    <p>In Windows Command Prompt (CMD), you can view the contents of files and directories using a few different commands. This guide will show you how to use the <code>dir</code> and <code>type</code> commands to accomplish these tasks.</p>
+
+    <h2>1. Viewing Files and Directories</h2>
+    <p>To view a list of files and directories in the current directory, use the <code>dir</code> command:</p>
+    <pre><code>dir</code></pre>
+
+    <p>To list files in a specific directory, use the <code>dir</code> command followed by the path to that directory:</p>
+    <pre><code>dir C:\path\to\directory</code></pre>
+
+    <h2>2. Viewing Hidden Files</h2>
+    <p>If you need to view hidden files, use the <code>/a</code> option with the <code>dir</code> command:</p>
+    <pre><code>dir /a</code></pre>
+
+    <h2>3. Displaying File Contents</h2>
+    <p>To display the contents of a file, you can use the <code>type</code> command:</p>
+    <pre><code>type filename.txt</code></pre>
+    <p>Replace <code>filename.txt</code> with the path to the file you want to view.</p>
+
+    <h3>Example</h3>
+    <p>To display the contents of a file named <code>example.txt</code> in the current directory:</p>
+    <pre><code>type example.txt</code></pre>
+
+    <p>If the file is located in a different directory, specify the full path:</p>
+    <pre><code>type C:\path\to\file\example.txt</code></pre>
+
+    <h2>4. Viewing Long Files</h2>
+    <p>If the file is too long to fit on one screen, you can use the <code>type</code> command in combination with the <code>more</code> command to paginate the output:</p>
+    <pre><code>type filename.txt | more</code></pre>
+    <p>This will let you scroll through the file one page at a time.</p>
+
+    <h2>Summary</h2>
+    <p>Using the <code>dir</code> and <code>type</code> commands in Windows Command Prompt allows you to view files, directories, and file contents efficiently. The <code>more</code> command is also useful for paging through long files.</p>
+</body>
+</html>
