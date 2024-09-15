@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viewing Files in Windows Command Prompt</title>
+    <title>Cyberlens Lab Write-Up</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 20px;
         }
-        h1 {
+        h1, h2, h3 {
             color: #333;
         }
         code {
@@ -24,41 +24,50 @@
             border-radius: 5px;
             overflow-x: auto;
         }
+        .steps {
+            margin: 20px 0;
+        }
+        .highlight {
+            background-color: #e0f7fa;
+            border: 1px solid #b2ebf2;
+            padding: 10px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
-    <h1>Viewing Files in Windows Command Prompt</h1>
-    <p>In Windows Command Prompt (CMD), you can view the contents of files and directories using a few different commands. This guide will show you how to use the <code>dir</code> and <code>type</code> commands to accomplish these tasks.</p>
+    <h1>Cyberlens Lab Write-Up</h1>
+    <p>It was more difficult than the mkingdom since I don't know much about Windows, but here I am after completing it—so yeah, nothing's impossible!</p>
 
-    <h2>1. Viewing Files and Directories</h2>
-    <p>To view a list of files and directories in the current directory, use the <code>dir</code> command:</p>
-    <pre><code>dir</code></pre>
+    <h2>Lab Name:</h2>
+    <p><strong>Cyberlens</strong></p>
 
-    <p>To list files in a specific directory, use the <code>dir</code> command followed by the path to that directory:</p>
-    <pre><code>dir C:\path\to\directory</code></pre>
+    <h2>Goal:</h2>
+    <p><strong>To gain root access</strong></p>
 
-    <h2>2. Viewing Hidden Files</h2>
-    <p>If you need to view hidden files, use the <code>/a</code> option with the <code>dir</code> command:</p>
-    <pre><code>dir /a</code></pre>
+    <h2>Tools Used:</h2>
+    <ul>
+        <li>Metasploit</li>
+        <li>ffuf</li>
+        <li>nmap</li>
+        <li>searchsploit</li>
+    </ul>
 
-    <h2>3. Displaying File Contents</h2>
-    <p>To display the contents of a file, you can use the <code>type</code> command:</p>
-    <pre><code>type filename.txt</code></pre>
-    <p>Replace <code>filename.txt</code> with the path to the file you want to view.</p>
+    <h2>Steps:</h2>
+    <div class="steps">
+        <h3>1. Initial Exploration:</h3>
+        <p>The first thing I did was use <code>nmap</code> on the target IP to see which ports were open. Then I used <code>ffuf</code> to fuzz the directories. I checked port 80 by simply searching the IP in a web browser, and yes, it was available.</p>
+        <p>I took a closer look at the website and noticed that it was fetching data from another port. I accessed this port and discovered it was running a deprecated version of Apache Tika.</p>
+        <p>I searched for this vulnerability on <code>searchsploit</code> and found a corresponding exploit in <code>Metasploit</code>. I set up the exploit with all the necessary options and hit <code>exploit</code>. Success! I got a shell.</p>
+        <p>I navigated through the system and found the <code>user.txt</code> file at <code>/user/Iforgotthenamebutit'snotadministrator/Desktop/user.txt</code>.</p>
 
-    <h3>Example</h3>
-    <p>To display the contents of a file named <code>example.txt</code> in the current directory:</p>
-    <pre><code>type example.txt</code></pre>
+        <h3>2. Privilege Escalation:</h3>
+        <p>I saved the session by pressing <code>Ctrl+Z</code>, then searched for the <code>post/multi/recon/local_exploit_suggester</code> exploit in Metasploit. I set the session and ran it, which found a working vulnerability.</p>
+        <p>I used this exploit, set the options, and ran it. Boom! I gained admin privileges and accessed the <code>/Users/Administrator/Desktop/admin.txt</code> file.</p>
+    </div>
 
-    <p>If the file is located in a different directory, specify the full path:</p>
-    <pre><code>type C:\path\to\file\example.txt</code></pre>
-
-    <h2>4. Viewing Long Files</h2>
-    <p>If the file is too long to fit on one screen, you can use the <code>type</code> command in combination with the <code>more</code> command to paginate the output:</p>
-    <pre><code>type filename.txt | more</code></pre>
-    <p>This will let you scroll through the file one page at a time.</p>
-
-    <h2>Summary</h2>
-    <p>Using the <code>dir</code> and <code>type</code> commands in Windows Command Prompt allows you to view files, directories, and file contents efficiently. The <code>more</code> command is also useful for paging through long files.</p>
+    <h2>Conclusion:</h2>
+    <p><strong>BOOM!</strong> Another challenge conquered. Cyberlens proved to be a tough nut to crack, but perseverance and the right tools made it possible. Onward to the next!</p>
 </body>
 </html>
+
