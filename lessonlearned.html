@@ -30,7 +30,7 @@
 </head>
 <body>
 
-    <h1>🟢 SQL Injection Lab: Bypassing the Login</h1>
+    <h1> SQL Injection Lab: Bypassing the Login</h1>
 
     <h3><strong>Lab Name:</strong> Lesson learned?</h3>
     <h3><strong>Goal:</strong> To bypass login</h3>
@@ -39,15 +39,15 @@
 
     <h2>Steps</h2>
 
-    <h3>1️⃣ Brute-forcing Username</h3>
+    <h3>1. Brute-forcing Username</h3>
     <p>The first thing I did when I saw the login page was to brute-force the login, so I sent the request to the repeater and tried entering incorrect credentials around 10-20 times. Since I wasn’t getting any pushback, I decided to brute-force common usernames.</p>
     <p>Initially, I used the default system usernames file from <strong>Seclists</strong>, but that didn’t work out. I then switched to more common names, and soon enough, I found a valid username!</p>
 
-    <h3>2️⃣ Trying SQLi for the Password</h3>
+    <h3>2.  Trying SQLi for the Password</h3>
     <p>Now, I was ready to brute-force the password too, but then I thought, “Wait a second, what about SQL injection?”</p>
     <p>I sent the correct username along with a few SQLi attempts in the password field, but no luck at first. Then, I tried a very simple SQLi payload in the <strong>username</strong> field instead of the password.</p>
 
-    <h3>3️⃣ Cracking the Lab</h3>
+    <h3>3.  Cracking the Lab</h3>
     <p>Are you still here? Maybe you're a beginner, and that’s cool. But if you already know SQL injection and you're here without trying first... shame on you! 😉</p>
     <p>Here’s the payload that worked for me:</p>
     <p class="invisible-text">username=arnold'--+&password=</p>
