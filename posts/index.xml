@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Awesome Hugo blog</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Awesome Hugo blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 26 Nov 2024 00:55:05 +0545</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Post</title>
+      <link>http://localhost:1313/posts/my-first-post/</link>
+      <pubDate>Tue, 26 Nov 2024 00:55:05 +0545</pubDate>
+      
+      <guid>http://localhost:1313/posts/my-first-post/</guid>
+      
+      <description>&lt;h1 id=&#34;yo-yo-honey-singa&#34;&gt;yo yo honey singa&lt;/h1&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>
