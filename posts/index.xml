@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Sairas Shrestha</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>https://sairas.tech/posts/</link>
     <description>Recent content in Posts on Sairas Shrestha</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 26 Nov 2024 00:55:05 +0545</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Nov 2024 00:55:05 +0545</lastBuildDate><atom:link href="https://sairas.tech/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My First Post</title>
-      <link>http://localhost:1313/posts/my-first-post/</link>
+      <link>https://sairas.tech/posts/my-first-post/</link>
       <pubDate>Tue, 26 Nov 2024 00:55:05 +0545</pubDate>
       
-      <guid>http://localhost:1313/posts/my-first-post/</guid>
+      <guid>https://sairas.tech/posts/my-first-post/</guid>
       
       <description>&lt;h1 id=&#34;yo-yo-honey-singa&#34;&gt;yo yo honey singa&lt;/h1&gt;</description>
       
