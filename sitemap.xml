@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://sairasshrestha.github.io/</loc>
+    <loc>https://sairas.tech/posts/my-first-post/</loc>
     <lastmod>2024-11-26T00:55:05+05:45</lastmod>
   </url><url>
-    <loc>https://sairasshrestha.github.io/posts/my-first-post/</loc>
+    <loc>https://sairas.tech/posts/</loc>
     <lastmod>2024-11-26T00:55:05+05:45</lastmod>
   </url><url>
-    <loc>https://sairasshrestha.github.io/posts/</loc>
+    <loc>https://sairas.tech/</loc>
     <lastmod>2024-11-26T00:55:05+05:45</lastmod>
   </url><url>
-    <loc>https://sairasshrestha.github.io/categories/</loc>
+    <loc>https://sairas.tech/categories/</loc>
   </url><url>
-    <loc>https://sairasshrestha.github.io/tags/</loc>
+    <loc>https://sairas.tech/tags/</loc>
   </url>
 </urlset>
