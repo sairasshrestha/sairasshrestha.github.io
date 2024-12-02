@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Sairas ko website</title>
+    <link>https://sairas.tech/posts/</link>
+    <description>Recent content in Posts on Sairas ko website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 01 Dec 2024 01:45:35 +0545</lastBuildDate><atom:link href="https://sairas.tech/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Annie Ctf</title>
+      <link>https://sairas.tech/posts/annie-ctf/</link>
+      <pubDate>Sun, 01 Dec 2024 01:45:35 +0545</pubDate>
+      
+      <guid>https://sairas.tech/posts/annie-ctf/</guid>
+      
+      <description>This lab was relativey simple but taught me a lot of things
+Enumeration The thing I like to do is find all the open ports with rustscan and then run nmap for futher analysis, it makes my thing faster by about 10 minutes. So I ran these following commands
+rustscan -a $ip -b 65535 -u 5000 | tee rustscan Then I run nmap on the found ports
+sudo nmap $ip -p xxx,xxx -sV -sC I saw that two ports were open, One was ssh on 22 and real server on 7070</description>
+      
+    </item>
+    
+  </channel>
+</rss>

