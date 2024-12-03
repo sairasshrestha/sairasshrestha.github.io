@@ -6,7 +6,19 @@
     <description>Recent content in Posts on Sairas ko website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 01 Dec 2024 01:45:35 +0545</lastBuildDate><atom:link href="https://sairas.tech/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 Dec 2024 12:26:17 +0545</lastBuildDate><atom:link href="https://sairas.tech/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Php Wrappers</title>
+      <link>https://sairas.tech/posts/php-wrappers/</link>
+      <pubDate>Tue, 03 Dec 2024 12:26:17 +0545</pubDate>
+      
+      <guid>https://sairas.tech/posts/php-wrappers/</guid>
+      
+      <description>Detailed Note on Remote Code Execution (RCE) Using PHP Wrappers PHP wrappers are special streams provided by PHP to handle data in different ways. Attackers exploit them to achieve Remote Code Execution (RCE) when the target application lacks sufficient input sanitization or proper configuration. Below is a detailed explanation of how some PHP wrappers (expect, data, php://input, and allow_url_include) are used in RCE attacks.
+1. The expect Wrapper What It Does The expect wrapper allows execution of shell commands directly from PHP.</description>
+      
+    </item>
+    
     <item>
       <title>Annie Ctf</title>
       <link>https://sairas.tech/posts/annie-ctf/</link>

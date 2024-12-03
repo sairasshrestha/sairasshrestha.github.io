@@ -53,7 +53,7 @@
         },
         "datePublished": "2024-12-01",
         "description": "",
-        "wordCount":  897 ,
+        "wordCount":  889 ,
         "mainEntityOfPage": "True",
         "dateModified": "2024-12-01",
         "image": {
@@ -283,9 +283,9 @@ s.sendto(p, (ip, port))
 s.close()
 
 print(&#39;reverse shell should connect within 5 seconds&#39;)
-</code></pre><p>This is also copied from (<a href="https://github.com/josephalan42/Exploits/blob/main/AnyDesk%205.5.2%20-%20Remote%20Code%20Executionjohsephalan)[Joseph">https://github.com/josephalan42/Exploits/blob/main/AnyDesk%205.5.2%20-%20Remote%20Code%20Executionjohsephalan)[Joseph</a> Alan]</p>
+</code></pre><p>This is also copied from <a href="https://github.com/josephalan42/Exploits/blob/main/AnyDesk%205.5.2%20-%20Remote%20Code%20Executionjohsephalan">Joseph Alan</a></p>
 <p>Make sure you are running netcat on the another tab and you will connect, you can either use that shell or just go to /home/annie/.ssh and you&rsquo;ll find id_rsa copy that and save that in your system.
-After that get the passphrase, if you don&rsquo;t know how to get the passphrase from an ssh key do check out my another post about it (<a href="https://sairasshrestha.github.io/crackingsshkey">https://sairasshrestha.github.io/crackingsshkey</a>)</p>
+After that get the passphrase, if you don&rsquo;t know how to get the passphrase from an ssh key do</p>
 <p>Once you get the passphrase connect it through ssh doing something like</p>
 <pre tabindex="0"><code>ssh -i key annie@$ip
 </code></pre><p>Say yes the fingerprint and put the passphrase when asked, boom now you are in the shell</p>
