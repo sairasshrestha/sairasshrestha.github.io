@@ -6,18 +6,7 @@
     <description>Recent content on Sairas ko website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 03 Dec 2024 12:26:17 +0545</lastBuildDate><atom:link href="https://sairas.tech/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>File Inclusion to RCE [Php wrappers]</title>
-      <link>https://sairas.tech/posts/php-wrappers/</link>
-      <pubDate>Tue, 03 Dec 2024 12:26:17 +0545</pubDate>
-      
-      <guid>https://sairas.tech/posts/php-wrappers/</guid>
-      
-      <description>PHP Wrappers and Remote Code Execution (RCE) In the context of Remote Code Execution (RCE) vulnerabilities, PHP wrappers play a crucial role in how external resources or data are handled by PHP scripts. Wrappers essentially allow PHP to access various data sources, including files, URLs, and even remote systems. When misconfigured, PHP wrappers can facilitate an attacker’s ability to execute arbitrary commands, leading to potential RCE vulnerabilities. Below, I’ll cover some important PHP wrappers and how they can be exploited, with a specific focus on the role of allow_url_include, input, and data wrappers.</description>
-      
-    </item>
-    
+    <lastBuildDate>Sun, 01 Dec 2024 01:45:35 +0545</lastBuildDate><atom:link href="https://sairas.tech/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Annie Ctf</title>
       <link>https://sairas.tech/posts/annie-ctf/</link>
