@@ -14,8 +14,7 @@
       
       <guid>https://sairas.tech/posts/php-wrappers/</guid>
       
-      <description>Detailed Note on Remote Code Execution (RCE) Using PHP Wrappers PHP wrappers are special streams provided by PHP to handle data in different ways. Attackers exploit them to achieve Remote Code Execution (RCE) when the target application lacks sufficient input sanitization or proper configuration. Below is a detailed explanation of how some PHP wrappers (expect, data, php://input, and allow_url_include) are used in RCE attacks.
-1. The expect Wrapper What It Does The expect wrapper allows execution of shell commands directly from PHP.</description>
+      <description>PHP Wrappers and Remote Code Execution (RCE) In the context of Remote Code Execution (RCE) vulnerabilities, PHP wrappers play a crucial role in how external resources or data are handled by PHP scripts. Wrappers essentially allow PHP to access various data sources, including files, URLs, and even remote systems. When misconfigured, PHP wrappers can facilitate an attacker’s ability to execute arbitrary commands, leading to potential RCE vulnerabilities. Below, I’ll cover some important PHP wrappers and how they can be exploited, with a specific focus on the role of allow_url_include, input, and data wrappers.</description>
       
     </item>
     
