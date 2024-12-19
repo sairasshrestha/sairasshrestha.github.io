@@ -8,13 +8,14 @@
     <language>en-gb</language>
     <lastBuildDate>Wed, 18 Dec 2024 21:07:00 +0545</lastBuildDate><atom:link href="https://sairas.tech/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Portswigger Xss Lab Part 1</title>
+      <title>Portswigger XSS Lab Part 1</title>
       <link>https://sairas.tech/posts/portswigger-xss-lab-part-1/</link>
       <pubDate>Wed, 18 Dec 2024 21:07:00 +0545</pubDate>
       
       <guid>https://sairas.tech/posts/portswigger-xss-lab-part-1/</guid>
       
-      <description>Reflected XSS into HTML context with nothing encoded Solution: &amp;lt;script&amp;gt;alert(1)&amp;lt;/script&amp;gt; Explaination: &amp;lt;section class=blog-header&amp;gt; &amp;lt;h1&amp;gt;0 search results for &amp;#39;abc123&amp;#39;&amp;lt;/h1&amp;gt; &amp;lt;hr&amp;gt;| &amp;lt;/section&amp;gt; *The vulnerable parameter here is the h1 tag as it can run scripts inside of it so when we search &amp;lt;script&amp;gt;alert(1)&amp;lt;/script&amp;gt; instead of abc123 the htm code becomes
+      <description>Reflected XSS into HTML context with nothing encoded Solution: &amp;lt;script&amp;gt;alert(1)&amp;lt;/script&amp;gt;
+Explaination: &amp;lt;section class=blog-header&amp;gt; &amp;lt;h1&amp;gt;0 search results for &amp;#39;abc123&amp;#39;&amp;lt;/h1&amp;gt; &amp;lt;hr&amp;gt;| &amp;lt;/section&amp;gt; *The vulnerable parameter here is the h1 tag as it can run scripts inside of it so when we search &amp;lt;script&amp;gt;alert(1)&amp;lt;/script&amp;gt; instead of abc123 the htm code becomes
 &amp;lt;section class=blog-header&amp;gt; &amp;lt;h1&amp;gt;0 search results for &amp;#39;&amp;lt;script&amp;gt;alert(1)&amp;lt;/script&amp;gt;&amp;#39;&amp;lt;/h1&amp;gt; &amp;lt;hr&amp;gt; &amp;lt;/section&amp;gt; and it will end up executing the alert script.
 Stored XSS into HTML context with nothing encoded Solution: &amp;lt;p&amp;gt;&amp;lt;script&amp;gt;alert(1)&amp;lt;/script&amp;gt;&amp;lt;/p&amp;gt;</description>
       
